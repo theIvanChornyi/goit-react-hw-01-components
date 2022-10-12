@@ -1,16 +1,9 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+import PropTypes from 'prop-types';
+
+export const App = ({ children }) => {
+  return <main>{children}</main>;
+};
+
+App.prototype = {
+  children: PropTypes.node,
 };
