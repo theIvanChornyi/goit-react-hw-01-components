@@ -1,62 +1,66 @@
 import styled from 'styled-components';
 
 export const TransactionTable = styled.table`
-  width: 750px;
+  width: ${p => 3 * p.theme.space[8]}px;
   margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: ${p => p.theme.radii.normal};
+  box-shadow: ${p => p.theme.shadows.card};
 
-  background-color: white;
-  color: #757575;
+  background-color: ${p => p.theme.colors.background};
+  color: ${p => p.theme.colors.text};
 
   text-align: center;
+  text-transform: capitalize;
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: ${19 / 16};
+  font-weight: ${p => p.theme.fontWeights.normal};
+  font-size: ${p => p.theme.fontSizes.m};
 
   border-collapse: collapse;
 
   td {
-    height: 50px;
+    height: ${p => p.theme.space[5]}px;
   }
   th {
-    background-color: rgb(183, 250, 228);
+    background-color: ${p => p.theme.colors.primary};
 
-    height: 50px;
+    height: ${p => p.theme.space[5]}px;
     :first-child {
-      border-top-left-radius: 10px;
-      border-right: 2px solid #f5f4fa;
+      border-top-left-radius: ${p => p.theme.radii.normal};
+      border-right: ${p => p.theme.borders.normal}
+        ${p => p.theme.colors.secondary};
     }
+
     :last-child {
-      border-top-right-radius: 10px;
-      border-left: 2px solid #f5f4fa;
+      border-top-right-radius: ${p => p.theme.radii.normal};
+      border-left: ${p => p.theme.borders.normal}
+        ${p => p.theme.colors.secondary};
     }
   }
   tbody td {
     :first-child {
-      border-right: 2px solid #f5f4fa;
+      border-right: ${p => p.theme.borders.normal}
+        ${p => p.theme.colors.secondary};
     }
     :last-child {
-      border-left: 2px solid #f5f4fa;
+      border-left: ${p => p.theme.borders.normal}
+        ${p => p.theme.colors.secondary};
     }
   }
   tbody tr:nth-child(odd) {
-    background-color: white;
-    color: #9a91c7;
+    background-color: ${p => p.theme.colors.background};
+    color: ${p => p.theme.colors.accent};
   }
 
   tbody tr:nth-child(even) {
-    background-color: #9a91c7;
-    color: white;
+    background-color: ${p => p.theme.colors.accent};
+    color: ${p => p.theme.colors.white};
   }
   tbody tr:last-child {
     td:first-child {
-      border-bottom-left-radius: 10px;
+      border-bottom-left-radius: ${p => p.theme.radii.normal};
     }
     td:last-child {
-      border-bottom-right-radius: 10px;
+      border-bottom-right-radius: ${p => p.theme.radii.normal};
     }
   }
 `;

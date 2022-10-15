@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const FriendListStyled = styled.ul`
-  width: 250px;
-  margin: 0 auto 25px;
+  width: ${p => p.theme.space[8]}px;
+  margin: 0 auto ${p => p.theme.space[4]}px;
   background-color: transparent;
-  color: #9a91c7;
+  color: ${p => p.theme.colors.accent};
 
   text-align: center;
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: ${19 / 16};
+  font-weight: ${p => p.theme.fontWeights.normal};
+  font-size: ${p => p.theme.fontSizes.m};
+  line-height: ${p => p.theme.lineHeights.body};
 `;

@@ -3,23 +3,21 @@ import styled from 'styled-components';
 export const ItemFriend = styled.li`
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14),
-    0px 0px 2px rgba(0, 0, 0, 0.2);
+  gap: ${p => p.theme.space[3]}px;
+  padding: ${p => p.theme.space[3]}px;
+  box-shadow: ${p => p.theme.shadows.card};
   :not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: ${p => p.theme.space[3]}px;
   }
 `;
 export const FriendStatus = styled.span`
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
+  width: ${p => p.theme.space[4]}px;
+  height: ${p => p.theme.space[4]}px;
+  border-radius: ${p => p.theme.radii.round};
   background-color: ${({ isOnline }) => (isOnline ? 'red' : 'green')};
 `;
 export const FriendAvatar = styled.img`
-  background-color: rgb(183, 250, 228);
-  border-radius: 10px;
-  padding: 5px;
+  background-color: ${p => p.theme.colors.primary};
+  border-radius: ${p => p.theme.radii.normal};
+  padding: ${p => p.theme.space[2]}px;
 `;
-export const FriendName = styled.p``;

@@ -1,54 +1,53 @@
 import styled from 'styled-components';
 
 export const UserProfile = styled.div`
-  width: 250px;
+  width: ${p => p.theme.space[8]}px;
   margin: 0 auto;
-  padding-top: 25px;
-  margin-bottom: 25px;
-  border-radius: 10px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding-top: ${p => p.theme.space[4]}px;
+  margin-bottom: ${p => p.theme.space[4]}px;
+  border-radius: ${p => p.theme.radii.normal};
+  box-shadow: ${p => p.theme.shadows.card};
 
-  background-color: white;
-  color: #757575;
+  background-color: ${p => p.theme.colors.background};
+  color: ${p => p.theme.colors.text};
 
   text-align: center;
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: ${19 / 16};
+  font-weight: ${p => p.theme.fontWeights.normal};
+  font-size: ${p => p.theme.fontSizes.m};
+  line-height: ${p => p.theme.lineHeights.body};
+  overflow: hidden;
 `;
-export const UserDescription = styled.div``;
 export const UserAvatar = styled.img`
-  background-color: rgb(183, 250, 228);
+  background-color: ${p => p.theme.colors.primary};
 
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 0 auto 25px;
+  width: ${p => p.theme.space[7]}px;
+  height: ${p => p.theme.space[7]}px;
+  border-radius: ${p => p.theme.radii.round};
+  margin: 0 auto ${p => p.theme.space[4]}px; ;
 `;
 export const UserName = styled.p`
-  color: #9a91c7;
-  font-weight: 500;
-  font-size: 19px;
-  margin-bottom: 10px;
+  color: ${p => p.theme.colors.accent};
+  font-weight: ${p => p.theme.fontWeights.bold};
+  font-size: ${p => p.theme.fontSizes.regular};
+  margin-bottom: ${p => p.theme.space[3]}px;
 `;
 export const UserTag = styled.p`
-  margin-bottom: 10px;
+  margin-bottom: ${p => p.theme.space[3]}px;
 `;
 export const UserLocation = styled.p`
-  margin-bottom: 10px;
+  margin-bottom: ${p => p.theme.space[3]}px;
 `;
 export const UserStats = styled.ul`
   display: flex;
-  background-color: rgb(183, 250, 228);
-  border-top: 2px solid #9a91c7;
+  background-color: ${p => p.theme.colors.primary};
+  border-top: ${p => p.theme.borders.normal} ${p => p.theme.colors.accent};
 `;
 
 export const StatsItem = styled.li`
-  padding: 25px 0;
+  padding: ${p => p.theme.space[4]}px 0;
   :not(:first-child) {
-    border-left: 2px solid #9a91c7;
+    border-left: ${p => p.theme.borders.normal} ${p => p.theme.colors.accent};
   }
   width: 33%;
 `;
@@ -59,6 +58,6 @@ export const UserLabel = styled.span`
 `;
 export const UserQuantity = styled.span`
   display: block;
-  color: #9a91c7;
-  font-weight: 500;
+  color: ${p => p.theme.colors.accent};
+  font-weight: ${p => p.theme.fontWeights.bold};
 `;

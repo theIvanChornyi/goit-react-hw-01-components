@@ -1,29 +1,27 @@
 import styled from 'styled-components';
 
 export const SectionStatistics = styled.section`
-  margin: 0 auto 25px;
-  background-color: white;
-  width: 250px;
-  border-radius: 10px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  margin: 0 auto ${p => p.theme.space[4]}px;
+  background-color: ${p => p.theme.colors.background};
+  width: ${p => p.theme.space[8]}px;
+  border-radius: ${p => p.theme.radii.normal};
+  box-shadow: ${p => p.theme.shadows.card};
 
-  color: white;
+  color: ${p => p.theme.colors.white};
 
   text-align: center;
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: ${19 / 16};
+  font-weight: ${p => p.theme.fontWeights.normal};
+  font-size: ${p => p.theme.fontSizes.m};
 
   overflow: hidden;
 `;
 export const Title = styled.h2`
-  padding-top: 25px;
+  padding-top: ${p => p.theme.space[4]}px;
 
-  color: #9a91c7;
-  font-weight: 500;
-  margin-bottom: 25px;
+  color: ${p => p.theme.colors.accent};
+  font-weight: ${p => p.theme.fontWeights.bold};
+  margin-bottom: ${p => p.theme.space[4]}px;
 `;
 export const List = styled.ul`
   display: grid;
@@ -31,11 +29,11 @@ export const List = styled.ul`
   grid-auto-flow: row;
 `;
 export const ListItem = styled.li`
-  padding: 10px 0;
+  padding: ${p => p.theme.space[3]}px 0;
   background-color: ${({ backgroundColor }) => backgroundColor()};
 `;
 export const Label = styled.span`
-  margin-bottom: 5px;
+  margin-bottom: ${p => p.theme.space[2]}px;
   display: block;
 `;
 export const Percentage = styled.span`
